@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://blog.mwaki.com
+title: More Than Just Bacon
+subtitle: More than the sum of its bacon-bits.
+author: Mwaki Harri Magotswi
 simple_search: https://www.google.com/search
 description:
 
