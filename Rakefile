@@ -248,11 +248,29 @@ task :rsync do
   ok_failed system("rsync -avze 'ssh -p #{ssh_port}' #{exclude} #{rsync_args} #{"--delete" unless rsync_delete == false} #{public_dir}/ #{ssh_user}:#{document_root}")
 end
 
+desc "Deploy website via Heroku"
+task :heroku, :commit_message do |t, args|
+  if args.title
+    message = args.commit_message
+  else
+    message = get_stdin("What updates are you pushing?")
+  end
+
+  Rake::Task[:generate].execute
+
+  puts "## Deploying website via Heroku"
+  system "git add ."
+  system "git commit -m \"#{message}\""
+
+  git_push("origin", "head")
+  git_push("heroku", "master")
+end
+
 desc "deploy public directory to github pages"
 multitask :push do
   puts "## Deploying branch to Github Pages "
   puts "## Pulling any updates from Github Pages "
-  cd "#{deploy_dir}" do 
+  cd "#{deploy_dir}" do
     system "git pull"
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
@@ -395,6 +413,11 @@ def blog_url(user, project)
   end
   url += "/#{project}" unless project == ''
   url
+end
+
+def git_push(to, from)
+  puts "pushing updtates:\n\t - To:   #{to}\n\t - From: #{from}"
+  system "git push #{to} #{from}"
 end
 
 desc "list tasks"
