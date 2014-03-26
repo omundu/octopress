@@ -253,7 +253,7 @@ task :heroku, :commit_message do |t, args|
   if args.title
     message = args.commit_message
   else
-    message = get_stdin("What updates are you pushing?")
+    message = get_stdin("What updates are you pushing? ")
   end
 
   Rake::Task[:generate].execute
