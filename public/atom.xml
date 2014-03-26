@@ -4,7 +4,7 @@
   <title><![CDATA[More Than Just Bacon]]></title>
   <link href="http://blog.mwaki.com/atom.xml" rel="self"/>
   <link href="http://blog.mwaki.com/"/>
-  <updated>2014-03-20T17:24:25-04:00</updated>
+  <updated>2014-03-26T11:31:53-04:00</updated>
   <id>http://blog.mwaki.com/</id>
   <author>
     <name><![CDATA[Mwaki Harri Magotswi]]></name>
@@ -12,5 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Am I Done With 2048?]]></title>
+    <link href="http://blog.mwaki.com/blog/2014/03/25/2048-done/"/>
+    <updated>2014-03-25T15:50:04-04:00</updated>
+    <id>http://blog.mwaki.com/blog/2014/03/25/2048-done</id>
+    <content type="html"><![CDATA[<p>A few days ago I came across the webgame <a href="http://gabrielecirulli.github.io/2048">2048</a>. It was simple enough, all you have to do was use the arrow keys to move tiles on the page combining matching tiles, that exist in powers of 2, with the goal of getting a tile to display the value <em>2048</em>.</p>
+
+<p>After several days of furious attempts I finally hit jackpot&hellip;and for those non-believers, here&rsquo;s proof:
+<img src="http://blog.mwaki.com/images/2048.png" title="and I finally win....but do I really win?" alt="For the win" /></p>
+
+<p>Hopefully this will put an end to my rather charged few days as I worked on forming an algorithm, went through all the steps I usually go through:</p>
+
+<ul>
+<li>Forming and follwing patterns.</li>
+<li>Randomly guessing what to do next</li>
+<li>Cycling the arrow keys</li>
+<li>Throwing hail mary&rsquo;s.</li>
+<li>Trying to have some sort of adaptive system by combiningin all the above</li>
+</ul>
+
+
+<p>Finally realized that I should be using only three of the arrow keys (avoided using the up arrow) and keeping the highest scored tiles in the bottom row preferrably the corner&hellip;and boom, solved, queue victory dance, and I&rsquo;m off the website. With my pride, somewhat and very embarrassingly, satisfied I closed the webpage and strolled out to what initally looked pleasant but was in fact uncomfortably cold weather. After rushing back in and warming myslef up I started wondering whether the algorithm I had stumbled across was a fluke&hellip;post on facebook or try to prove it?</p>
+]]></content>
+  </entry>
   
 </feed>
