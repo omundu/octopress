@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog - More Than Just Bacon</title>
+  <title>Setting Up Heroku Deploys on Octopress - More Than Just Bacon</title>
   <meta name="author" content="Mwaki Harri Magotswi">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://blog.mwaki.com/blog">
+  <link rel="canonical" href="http://blog.mwaki.com/blog/2014/03/26/setting-up-heroku-deploys-on-octopress">
   <link href="/favicon.ico" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="More Than Just Bacon" type="application/atom+xml">
@@ -66,15 +66,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/03/26/setting-up-heroku-deploys-on-octopress/">Setting Up Heroku Deploys on Octopress</a></h1>
+      <h1 class="entry-title">Setting Up Heroku Deploys on Octopress</h1>
     
     
       <p class="meta">
@@ -97,7 +94,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Octopress does a great job in setting you up to use heroku to host your site. Details for the almost trivial set up can be found <a href="http://octopress.org/docs/deploying/heroku/">here</a>. To summarize, after installing and setting up Heroku, create a Heroku repository as per usual:</p>
+<div class="entry-content"><p>Octopress does a great job in setting you up to use heroku to host your site. Details for the almost trivial set up can be found <a href="http://octopress.org/docs/deploying/heroku/">here</a>. To summarize, after installing and setting up Heroku, create a Heroku repository as per usual:</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>heroku create</span></code></pre></td></tr></table></div></figure>
@@ -168,22 +165,16 @@
 
 <p>And life is good.</p>
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/03/25/2048-done/">Am I Done With 2048?</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Mwaki Harri Magotswi</span></span>
+
+      
 
 
 
@@ -195,42 +186,36 @@
   
 
 
-<time datetime="2014-03-25T15:50:04-04:00" pubdate data-updated="true">Mar 25<span>th</span>, 2014</time>
-        
-      </p>
+<time datetime="2014-03-26T13:23:24-04:00" pubdate data-updated="true">Mar 26<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/hacks/'>hacks</a>, <a class='category' href='/blog/categories/how-to/'>how-to</a>, <a class='category' href='/blog/categories/octopress/'>octopress</a>
+  
+</span>
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>A few days ago I came across the webgame <a href="http://gabrielecirulli.github.io/2048">2048</a>. It was simple enough, all you have to do was use the arrow keys to move tiles on the page combining matching tiles, that exist in powers of 2, with the goal of getting a tile to display the value <em>2048</em>.</p>
-
-<p>After several days of furious attempts I finally hit jackpot&hellip;and for those non-believers, here&rsquo;s proof:
-<img src="/images/2048.png" title="and I finally win....but do I really win?" alt="For the win" /></p>
-
-<p>Hopefully this will put an end to my rather charged few days as I worked on forming an algorithm, went through all the steps I usually go through:</p>
-
-<ul>
-<li>Forming and follwing patterns.</li>
-<li>Randomly guessing what to do next</li>
-<li>Cycling the arrow keys</li>
-<li>Throwing hail mary&rsquo;s.</li>
-<li>Trying to have some sort of adaptive system by combiningin all the above</li>
-</ul>
-
-
-<p>Finally realized that I should be using only three of the arrow keys (avoided using the up arrow) and keeping the highest scored tiles in the bottom row preferrably the corner&hellip;and boom, solved, queue victory dance, and I&rsquo;m off the website. With my pride, somewhat and very embarrassingly, satisfied I closed the webpage and strolled out to what initally looked pleasant but was in fact uncomfortably cold weather. After rushing back in and warming myslef up I started wondering whether the algorithm I had stumbled across was a fluke&hellip;post on facebook or try to prove it?</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://blog.mwaki.com/blog/2014/03/26/setting-up-heroku-deploys-on-octopress/" data-via="" data-counturl="http://blog.mwaki.com/blog/2014/03/26/setting-up-heroku-deploys-on-octopress/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/03/25/2048-done/" title="Previous Post: Am I done with 2048?">&laquo; Am I done with 2048?</a>
+      
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
 
 <aside class="sidebar">
@@ -256,6 +241,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

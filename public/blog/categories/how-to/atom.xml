@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: How-to | More Than Just Bacon]]></title>
+  <link href="http://blog.mwaki.com/blog/categories/how-to/atom.xml" rel="self"/>
+  <link href="http://blog.mwaki.com/"/>
+  <updated>2014-03-26T15:09:51-04:00</updated>
+  <id>http://blog.mwaki.com/</id>
+  <author>
+    <name><![CDATA[Mwaki Harri Magotswi]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Setting Up Heroku Deploys on Octopress]]></title>
+    <link href="http://blog.mwaki.com/blog/2014/03/26/setting-up-heroku-deploys-on-octopress/"/>
+    <updated>2014-03-26T13:23:24-04:00</updated>
+    <id>http://blog.mwaki.com/blog/2014/03/26/setting-up-heroku-deploys-on-octopress</id>
+    <content type="html"><![CDATA[<p>Octopress does a great job in setting you up to use heroku to host your site. Details for the almost trivial set up can be found <a href="http://octopress.org/docs/deploying/heroku/">here</a>. To summarize, after installing and setting up Heroku, create a Heroku repository as per usual:</p>
+
+<p><code>
+heroku create
+</code></p>
+
+<p>Edit the <code>.gitignore</code> file and remove <code>public</code> so that the it is included with git changes and then run the following:</p>
+
+<p><code>
+rake generate
+git add .
+git commit -m 'site updated'
+git push heroku master
+</code></p>
+
+<p>You will need to run the above every time you add a new post so to make things easier, you can add a rake task to the Rakefile to handle the less exciting bits for you. Mine looks like:</p>
+
+<p>``` ruby rake task to deploy to heroku
+desc &ldquo;Deploy website via Heroku&rdquo;
+task :heroku, :commit_message do |t, args|
+  if args.title</p>
+
+<pre><code>message = args.commit_message
+</code></pre>
+
+<p>  else</p>
+
+<pre><code>message = get_stdin("What updates are you pushing? ")
+</code></pre>
+
+<p>  end</p>
+
+<p>  Rake::Task[:generate].execute</p>
+
+<p>  puts &ldquo;## Deploying website via Heroku&rdquo;
+  system &ldquo;git add .&rdquo;
+  system &ldquo;git commit -m \&rdquo;#{message}\&ldquo;&rdquo;</p>
+
+<p>  puts &ldquo;## pushing updtates: head &mdash;&ndash;> origin&rdquo;
+  system &ldquo;git push origin head&rdquo;</p>
+
+<p>  puts &ldquo;## pushing updtates: master &mdash;&ndash;> heroku&rdquo;
+  system &ldquo;git push heroku master&rdquo;
+end
+```</p>
+
+<p>And with that, all I have to do new after editing or creating a post is simply run:</p>
+
+<p><code>plain
+rake heroku
+</code></p>
+
+<p>And life is good.</p>
+]]></content>
+  </entry>
+  
+</feed>
