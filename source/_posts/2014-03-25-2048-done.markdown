@@ -3,7 +3,8 @@ layout: post
 title: "Am I done with 2048?"
 date: 2014-03-25 15:50:04 -0400
 comments: true
-categories:
+categories: random-thoughts, practice-blog
+tags: reflection, how-to, 2048
 ---
 
 A few days ago I came across the webgame [2048](http://gabrielecirulli.github.io/2048). It was simple enough, all you have to do was use the arrow keys to move tiles on the page combining matching tiles, that exist in powers of 2, with the goal of getting a tile to display the value *2048*.

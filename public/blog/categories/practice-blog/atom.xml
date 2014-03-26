@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[More Than Just Bacon]]></title>
-  <link href="http://blog.mwaki.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Practice-blog | More Than Just Bacon]]></title>
+  <link href="http://blog.mwaki.com/blog/categories/practice-blog/atom.xml" rel="self"/>
   <link href="http://blog.mwaki.com/"/>
   <updated>2014-03-26T13:06:42-04:00</updated>
   <id>http://blog.mwaki.com/</id>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[<p>A few days ago I came across the webgame <a href="http://gabrielecirulli.github.io/2048">2048</a>. It was simple enough, all you have to do was use the arrow keys to move tiles on the page combining matching tiles, that exist in powers of 2, with the goal of getting a tile to display the value <em>2048</em>.</p>
 
 <p>After several days of furious attempts I finally hit jackpot&hellip;and for those non-believers, here&rsquo;s proof:
-<img src="http://blog.mwaki.com/images/2048.png" title="and I finally win....but do I really win?" alt="For the win" /></p>
+<img src="/images/2048.png" title="and I finally win....but do I really win?" alt="For the win" /></p>
 
 <p>Hopefully this will put an end to my rather charged few days as I worked on forming an algorithm, went through all the steps I usually go through:</p>
 
