@@ -416,7 +416,7 @@ def blog_url(user, project)
 end
 
 def git_push(to, from)
-  puts "pushing updtates:\n\t - To:   #{to}\n\t - From: #{from}"
+  puts "## pushing updtates: #{from} ---> #{to}"
   system "git push #{to} #{from}"
 end
 
